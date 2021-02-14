@@ -6,24 +6,26 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    const locations = [{ name: 'Goa', country: 'India' },
-    { name: 'Amsterdam', country: 'Netherlands' },
-    { name: 'New York', country: 'USA' },
-    { name: 'Darjeeling', country: 'India' },
-    { name: 'Tokyo', country: 'Japan' },
-    { name: 'Lonavala', country: 'India' },
-  
+    this.cityList = [{ name: 'Goa', country: 'India',key:'location1' },
+    { name: 'Amsterdam', country: 'Netherlands',key:'location2' },
+    { name: 'New York', country: 'USA',key:'location3' },
+    { name: 'Darjeeling', country: 'India',key:'location4' },
+    { name: 'Tokyo', country: 'Japan',key:'location5' },
+    { name: 'Lonavala', country: 'India',key:'location6' },
+   
     ]
   }
 
   render() {
     return (
       <div id="main">
-        {locations.map(location=>(
-          <l1 key={location.country}>{location.name}</l1>
+      <ol>
+        {this.cityList.map(item=>(
+          <li key={item.key}>{item.name},{item.country}</li>
         ))}
+        </ol>
       </div>
-    );
+    )
   }
 }
 
