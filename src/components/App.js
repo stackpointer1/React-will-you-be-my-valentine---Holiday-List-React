@@ -41,7 +41,7 @@ class App extends Component {
     return (
       <div id="main">
         {this.cityList.filter(location=>location.country=='India').map(filteredLocation=>(
-          <li key="location">{filteredLocation.name}
+          <li key="location">{filteredLocation.name},{filteredLocation.country}
           </li>
         ))}
     </div>
