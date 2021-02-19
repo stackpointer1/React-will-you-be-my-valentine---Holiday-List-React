@@ -40,10 +40,13 @@ class App extends Component {
   render() {
     return (
       <div id="main">
+      <ol>
         {this.cityList.filter(location=>location.country=='India').map(filteredLocation=>(
           <li key="location">{filteredLocation.name},{filteredLocation.country}
           </li>
+          
         ))}
+        </ol>
     </div>
     )
   }
