@@ -41,8 +41,8 @@ class App extends Component {
     return (
       <div id="main">
       <ol>
-        {this.cityList.filter(location=>location.country=='India').map(filteredLocation=>(
-          <li key="location">{filteredLocation.name},{filteredLocation.country}
+        {this.cityList.filter(location=>location.country==='India').map(filteredLocation=>(
+          <li key="filteredLocation.location">{filteredLocation.name},{filteredLocation.country}
           </li>
           
         ))}
